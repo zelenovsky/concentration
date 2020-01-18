@@ -8,7 +8,7 @@ const StyledCard = styled.button.attrs(() => ({
     type: "button"
 }))<StyledCardProps>`
   display: block;
-  padding: 8rem;
+  padding: 8rem 2rem;
   font-size: 6rem;
   cursor: pointer;
   ${color};

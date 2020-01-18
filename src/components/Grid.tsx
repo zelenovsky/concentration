@@ -1,13 +1,16 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { grid, GridProps } from 'styled-system';
+import { grid, GridProps, layout, LayoutProps } from 'styled-system';
 
-const StyledGrid = styled.div<GridProps>`
+type StyledGridProps = GridProps & LayoutProps;
+
+const StyledGrid = styled.div<StyledGridProps>`
   ${grid};
+  ${layout};
   display: grid;
 `;
 
-const Grid: FC<GridProps> = (props) => {
+const Grid: FC<StyledGridProps> = (props) => {
     return <StyledGrid {...props} />
 };
 
