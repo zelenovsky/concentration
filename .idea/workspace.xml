@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Concentration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concentration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,12 +105,24 @@
       <workItem from="1578742487316" duration="2001000" />
       <workItem from="1578754531775" duration="13000" />
       <workItem from="1578754552509" duration="14027000" />
-      <workItem from="1579343891749" duration="1599000" />
+      <workItem from="1579343891749" duration="6996000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix responsive">
+      <created>1579345673005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579345673005</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix responsive" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578490523927">
@@ -122,22 +133,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1578754540687" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1578882539451">
+    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579345672855">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578882539451" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1578882539447">
+    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579345672855" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579347049080">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578882539447" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1578882539446">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579347049080" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1579347049079">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578882539446" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1578882539451">
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579347049079" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1579347049077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578882539451" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579347049077" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1579347049079">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579347049079" />
     <state x="42" y="40" width="1320" height="722" key="SettingsEditor" timestamp="1578756113455">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

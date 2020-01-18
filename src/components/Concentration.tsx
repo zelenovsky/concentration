@@ -13,6 +13,7 @@ const StyledConcentration = styled.div<SpaceProps>`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  perspective: 1000px;
 `;
 
 let idsFactory: number = 0;
@@ -27,7 +28,7 @@ const Concentration: React.FC = () => {
                     width="100%"
                     height="100%"
                 >
-                    { emojiChoices.map(emoji => <Card key={idsFactory += 1} content={emoji} />) }
+                    { emojiChoices.map(emoji => <Card key={idsFactory += 1} emoji={emoji} />) }
                 </Grid>
             </StyledConcentration>
          </Container>
