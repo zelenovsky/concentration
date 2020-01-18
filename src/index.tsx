@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-import theme from './theme/theme';
-import BaseStyles from './components/BaseStyles';
+import theme, { BaseStyles } from './theme/theme';
 import Concentration from './components/Concentration';
+import Container from './components/UI/Container';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
         <BaseStyles />
-        <Concentration />
+        <Container maxWidth={1}>
+            <Concentration />
+        </Container>
     </ThemeProvider>,
     document.getElementById('root')
 );

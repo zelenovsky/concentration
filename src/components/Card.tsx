@@ -2,7 +2,8 @@ import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { color, ColorProps, border, BorderProps } from 'styled-system';
 
-export interface CardProps {
+export interface ICard {
+    id?: number;
     emoji?: string;
     isFaceUp?: boolean;
     isMatched?: boolean;
@@ -10,7 +11,7 @@ export interface CardProps {
 
 const StyledCard = styled.button.attrs(() => ({
     type: "button"
-}))<CardProps>`
+}))<ICard>`
     position: relative;
     display: block;
     padding: 0;
@@ -22,7 +23,7 @@ const StyledCard = styled.button.attrs(() => ({
     transition: opacity .3s ease-out 1s;
 `;
 
-const StyledFrontSide = styled.div<ColorProps & BorderProps & CardProps>`
+const StyledFrontSide = styled.div<ColorProps & BorderProps & ICard>`
     position: relative;
     z-index: 1;
     display: block;
@@ -35,7 +36,7 @@ const StyledFrontSide = styled.div<ColorProps & BorderProps & CardProps>`
     ${border};
 `;
 
-const StyledBackSide = styled.div<ColorProps & BorderProps & CardProps>`
+const StyledBackSide = styled.div<ColorProps & BorderProps & ICard>`
     position: absolute;
     top: 0;
     left: 0;
@@ -49,13 +50,13 @@ const StyledBackSide = styled.div<ColorProps & BorderProps & CardProps>`
     ${border};
 `;
 
-const Card: FC<CardProps> = ({ emoji }) => {
+const Card: FC<ICard> = ({ emoji }) => {
     const [isFaceUp, setIsFaceUp] = useState<boolean>(false);
     const [isMatched, setIsMatched] = useState<boolean>(false);
 
     const handleClick = () => {
         setIsFaceUp(!isFaceUp);
-        setIsMatched(!isMatched);
+        // setIsMatched(!isMatched);
     };
 
     return (

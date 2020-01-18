@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="40389ae7-fbda-49cf-94bf-4fed93d12b81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BaseStyles.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Concentration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concentration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Flex.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Flex.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Grid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/emojiChoices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/emojiChoices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +45,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/theme" />
+      <recent name="$PROJECT_DIR$/src/components/UI" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
@@ -105,7 +114,7 @@
       <workItem from="1578742487316" duration="2001000" />
       <workItem from="1578754531775" duration="13000" />
       <workItem from="1578754552509" duration="14027000" />
-      <workItem from="1579343891749" duration="6996000" />
+      <workItem from="1579343891749" duration="15503000" />
     </task>
     <task id="LOCAL-00001" summary="Fix responsive">
       <created>1579345673005</created>
@@ -114,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579345673005</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add animations and states of cards">
+      <created>1579351758917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579351758917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix responsive" />
+    <MESSAGE value="Add animations and states of cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add animations and states of cards" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578490523927">
@@ -133,26 +150,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1578754540687" />
-    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579345672855">
+    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579351758808">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579345672855" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579347049080">
+    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579351758808" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579359864098">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579347049080" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1579347049079">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579359864098" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1579359864097">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579347049079" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1579347049077">
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579359864097" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1579359864096">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579347049077" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1579347049079">
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579359864096" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1579359864097">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579347049079" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579359864097" />
     <state x="42" y="40" width="1320" height="722" key="SettingsEditor" timestamp="1578756113455">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

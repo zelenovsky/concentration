@@ -1,3 +1,26 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const BaseStyles = createGlobalStyle`
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+  html {
+    font-size: 1vh;
+  }
+  
+  body {
+    margin: 0;
+  }
+`;
+
 export default {
   colors: {
     black: '#222',
