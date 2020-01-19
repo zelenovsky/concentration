@@ -4,6 +4,7 @@ import { space, SpaceProps } from 'styled-system';
 
 import Grid from './UI/Grid';
 import Card, { ICard } from './Card';
+import { idsFactory, randomChoice, shuffle } from '../helpers/helpers';
 import emojiChoices from '../data/emojiChoices';
 
 const StyledConcentration = styled.div<SpaceProps>`
@@ -15,40 +16,28 @@ const StyledConcentration = styled.div<SpaceProps>`
   ${space};
 `;
 
-const idsFactory = (): () => number => {
-    let count = 0;
-    return () => {
-        count += 1;
-        return count;
-    }
-};
-
-const emoji = (emojiChoices: string[]): string => {
-    const rand = Math.random() * emojiChoices.length;
-    const indexToRemove = Math.floor(rand);
-    return emojiChoices.splice(indexToRemove, 1)[0];
-};
-
-const shuffleCards = (cards: ICard[]) => {
-    let shuffledCards: ICard[] = [...cards];
-    let currentIndex: number = cards.length;
-    let temporaryValue: ICard = cards[0];
-    let randomIndex: number = 0;
-
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * cards.length);
-        currentIndex -= 1;
-        temporaryValue = shuffledCards[currentIndex];
-        shuffledCards[currentIndex] = shuffledCards[randomIndex];
-        shuffledCards[randomIndex] = temporaryValue;
-    }
-    return shuffledCards;
-};
-
 const Concentration: React.FC = () => {
     const [cards, setCards] = useState<ICard[]>([]);
+    const [indexOfFaceUpCard, setIndexOfFaceUpCard] = useState<number | undefined>(undefined);
     const numberOfCards: number = 7;
     const numberOfPairsOfCards: number = (numberOfCards + 1) / 2;
+
+    const chooseCard = (index: number): void => {
+        const tempCards = [...cards];
+        const chosenCard = tempCards[index];
+        // if (!chosenCard.isMatched) {
+        //     if (indexOfFaceUpCard !== index) {
+        //         if (tempCards[indexOfFaceUpCard].id === chosenCard.id) {
+        //             tempCards[indexOfFaceUpCard].isMatched = true;
+        //             chosenCard.isMatched = true;
+        //         }
+        //         chosenCard.isFaceUp = true;
+        //     } else {
+        //         setIndexOfFaceUpCard(index);
+        //     }
+        // }
+        setCards(tempCards);
+    };
 
     useEffect(() => {
         const id = idsFactory();
@@ -56,13 +45,13 @@ const Concentration: React.FC = () => {
         for (let i = 0; i < numberOfPairsOfCards; i++) {
             const newCard: ICard = {
                 id: id(),
-                emoji: emoji(emojiChoices),
+                emoji: randomChoice(emojiChoices),
                 isFaceUp: false,
                 isMatched: false
             };
-            tempCards = [...tempCards, newCard, newCard];
+            tempCards = [...tempCards, { ...newCard }, { ...newCard }];
         }
-        tempCards = shuffleCards(tempCards);
+        tempCards = shuffle(tempCards);
         setCards(tempCards);
     }, [numberOfPairsOfCards]);
 
@@ -79,7 +68,8 @@ const Concentration: React.FC = () => {
                         id={card.id}
                         emoji={card.emoji}
                         isFaceUp={card.isFaceUp}
-                        isMatched={card.isMatched}/>)}
+                        isMatched={card.isMatched}
+                        onClick={() => chooseCard(index)}/>)}
             </Grid>
         </StyledConcentration>
     );

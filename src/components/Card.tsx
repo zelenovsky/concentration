@@ -1,17 +1,27 @@
-import React, { FC, useState } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import styled from 'styled-components';
 import { color, ColorProps, border, BorderProps } from 'styled-system';
 
-export interface ICard {
-    id?: number;
-    emoji?: string;
-    isFaceUp?: boolean;
-    isMatched?: boolean;
+interface isMatched {
+    isMatched: boolean;
+}
+
+interface isFaceUp {
+    isFaceUp: boolean;
+}
+
+export interface ICard extends isMatched, isFaceUp {
+    id: number;
+    emoji: string;
+}
+
+export interface ICardEventHandler {
+    onClick: (e: MouseEvent) => void;
 }
 
 const StyledCard = styled.button.attrs(() => ({
     type: "button"
-}))<ICard>`
+}))<isMatched>`
     position: relative;
     display: block;
     padding: 0;
@@ -20,10 +30,10 @@ const StyledCard = styled.button.attrs(() => ({
     border: none;
     background-color: transparent;
     opacity: ${({ isMatched }) => isMatched ? "0" : "1"};
-    transition: opacity .3s ease-out 1s;
+    transition: opacity .3s ease-out;
 `;
 
-const StyledFrontSide = styled.div<ColorProps & BorderProps & ICard>`
+const StyledFrontSide = styled.div<ColorProps & BorderProps & isFaceUp>`
     position: relative;
     z-index: 1;
     display: block;
@@ -36,7 +46,7 @@ const StyledFrontSide = styled.div<ColorProps & BorderProps & ICard>`
     ${border};
 `;
 
-const StyledBackSide = styled.div<ColorProps & BorderProps & ICard>`
+const StyledBackSide = styled.div<ColorProps & BorderProps & isFaceUp>`
     position: absolute;
     top: 0;
     left: 0;
@@ -50,23 +60,21 @@ const StyledBackSide = styled.div<ColorProps & BorderProps & ICard>`
     ${border};
 `;
 
-const Card: FC<ICard> = ({ emoji }) => {
-    const [isFaceUp, setIsFaceUp] = useState<boolean>(false);
-    const [isMatched, setIsMatched] = useState<boolean>(false);
-
-    const handleClick = () => {
-        setIsFaceUp(!isFaceUp);
-        // setIsMatched(!isMatched);
-    };
-
+const Card: FC<ICard & ICardEventHandler> = ({
+    id,
+    emoji,
+    isMatched,
+    isFaceUp,
+    onClick
+}) => {
     return (
-        <StyledCard onClick={handleClick} isMatched={isMatched}>
+        <StyledCard onClick={onClick} isMatched={isMatched}>
             <StyledFrontSide bg="black" borderRadius={2} isFaceUp={isFaceUp}>
                 { emoji }
             </StyledFrontSide>
             <StyledBackSide bg="black" borderRadius={2} isFaceUp={isFaceUp}/>
         </StyledCard>
-    )
+    );
 };
 
 export default Card;
