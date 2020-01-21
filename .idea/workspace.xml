@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40389ae7-fbda-49cf-94bf-4fed93d12b81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Concentration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concentration.tsx" afterDir="false" />
@@ -109,7 +108,9 @@
       <workItem from="1578754531775" duration="13000" />
       <workItem from="1578754552509" duration="14027000" />
       <workItem from="1579343891749" duration="15892000" />
-      <workItem from="1579431490391" duration="9087000" />
+      <workItem from="1579431490391" duration="10279000" />
+      <workItem from="1579517856461" duration="6556000" />
+      <workItem from="1579617236608" duration="1911000" />
     </task>
     <task id="LOCAL-00001" summary="Fix responsive">
       <created>1579345673005</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579362352597</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add choose card logic">
+      <created>1579454327096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579454327096</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +150,8 @@
     <MESSAGE value="Fix responsive" />
     <MESSAGE value="Add animations and states of cards" />
     <MESSAGE value="Add render logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add render logic" />
+    <MESSAGE value="Add choose card logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add choose card logic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578490523927">
@@ -153,10 +162,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1578754540687" />
-    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579362352473">
+    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579454326899">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579362352473" />
+    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579454326899" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579359864098">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

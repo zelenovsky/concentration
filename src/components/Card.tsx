@@ -30,7 +30,8 @@ const StyledCard = styled.button.attrs(() => ({
     border: none;
     background-color: transparent;
     opacity: ${({ isMatched }) => isMatched ? "0" : "1"};
-    transition: opacity .3s ease-out;
+    transition: opacity 1s ease-out 1s;
+    will-change: opacity;
 `;
 
 const StyledFrontSide = styled.div<ColorProps & BorderProps & isFaceUp>`

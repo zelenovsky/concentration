@@ -18,24 +18,36 @@ const StyledConcentration = styled.div<SpaceProps>`
 
 const Concentration: React.FC = () => {
     const [cards, setCards] = useState<ICard[]>([]);
-    const [indexOfFaceUpCard, setIndexOfFaceUpCard] = useState<number | undefined>(undefined);
+    const [indexOfFaceUpCard, setIndexOfFaceUpCard] = useState<number | null>(null);
     const numberOfCards: number = 7;
     const numberOfPairsOfCards: number = (numberOfCards + 1) / 2;
 
     const chooseCard = (index: number): void => {
         const tempCards = [...cards];
         const chosenCard = tempCards[index];
-        // if (!chosenCard.isMatched) {
-        //     if (indexOfFaceUpCard !== index) {
-        //         if (tempCards[indexOfFaceUpCard].id === chosenCard.id) {
-        //             tempCards[indexOfFaceUpCard].isMatched = true;
-        //             chosenCard.isMatched = true;
-        //         }
-        //         chosenCard.isFaceUp = true;
-        //     } else {
-        //         setIndexOfFaceUpCard(index);
-        //     }
-        // }
+
+        chosenCard.isFaceUp = true;
+        if (indexOfFaceUpCard === null) {
+            setIndexOfFaceUpCard(index);
+        } else {
+            const faceUpCards = tempCards.filter((card, i) => card.isFaceUp);
+            if (faceUpCards.length === 3) {
+                tempCards.forEach((card, i) => {
+                    card.isFaceUp = (index === i);
+                });
+                setIndexOfFaceUpCard(index);
+            } else if (tempCards[indexOfFaceUpCard].id === chosenCard.id && indexOfFaceUpCard !== index) {
+                tempCards[indexOfFaceUpCard].isMatched = true;
+                chosenCard.isMatched = true;
+                // I don't like Timeout here, but I couldn't figure out something better
+                setTimeout(() => {
+                    tempCards.forEach((card) => {
+                        card.isFaceUp = false;
+                    });
+                }, 1000);
+                setIndexOfFaceUpCard(null);
+            }
+        }
         setCards(tempCards);
     };
 
