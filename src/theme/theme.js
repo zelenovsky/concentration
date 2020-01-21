@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const BaseStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
   *,
   *::after,
   *::before {
@@ -14,6 +16,8 @@ export const BaseStyles = createGlobalStyle`
   
   html {
     font-size: 1vh;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
   }
   
   body {

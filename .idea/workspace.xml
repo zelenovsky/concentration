@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40389ae7-fbda-49cf-94bf-4fed93d12b81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/FlipsCounter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Concentration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concentration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
       <workItem from="1579343891749" duration="15892000" />
       <workItem from="1579431490391" duration="10279000" />
       <workItem from="1579517856461" duration="6556000" />
-      <workItem from="1579617236608" duration="1911000" />
+      <workItem from="1579617236608" duration="4029000" />
     </task>
     <task id="LOCAL-00001" summary="Fix responsive">
       <created>1579345673005</created>
@@ -140,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579454327096</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add choose card logic">
+      <created>1579620166694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579620166694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,10 +170,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1578754540687" />
-    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579454326899">
+    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579620166574">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579454326899" />
+    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579620166574" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579359864098">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

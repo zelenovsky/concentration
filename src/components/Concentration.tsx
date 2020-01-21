@@ -4,6 +4,7 @@ import { space, SpaceProps } from 'styled-system';
 
 import Grid from './UI/Grid';
 import Card, { ICard } from './Card';
+import FlipsCounter from './FlipsCounter';
 import { idsFactory, randomChoice, shuffle } from '../helpers/helpers';
 import emojiChoices from '../data/emojiChoices';
 
@@ -11,6 +12,7 @@ const StyledConcentration = styled.div<SpaceProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
   perspective: 1000px;
   ${space};
@@ -19,6 +21,7 @@ const StyledConcentration = styled.div<SpaceProps>`
 const Concentration: React.FC = () => {
     const [cards, setCards] = useState<ICard[]>([]);
     const [indexOfFaceUpCard, setIndexOfFaceUpCard] = useState<number | null>(null);
+    const [flipsCount, setFlipsCount] = useState<number>(0);
     const numberOfCards: number = 7;
     const numberOfPairsOfCards: number = (numberOfCards + 1) / 2;
 
@@ -69,6 +72,7 @@ const Concentration: React.FC = () => {
 
     return (
         <StyledConcentration py={5}>
+            <FlipsCounter count={flipsCount} />
             <Grid
                 gridTemplateColumns={["1fr 1fr", "1fr 1fr 1fr"]}
                 gridGap={2}
@@ -81,7 +85,10 @@ const Concentration: React.FC = () => {
                         emoji={card.emoji}
                         isFaceUp={card.isFaceUp}
                         isMatched={card.isMatched}
-                        onClick={() => chooseCard(index)}/>)}
+                        onClick={() => {
+                            setFlipsCount(flipsCount + 1);
+                            chooseCard(index);
+                        }}/>)}
             </Grid>
         </StyledConcentration>
     );
