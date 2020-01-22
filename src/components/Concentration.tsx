@@ -5,6 +5,7 @@ import { space, SpaceProps } from 'styled-system';
 import Grid from './UI/Grid';
 import Card, { ICard } from './Card';
 import FlipsCounter from './FlipsCounter';
+import GameOver from './GameOver';
 import { idsFactory, randomChoice, shuffle } from '../helpers/helpers';
 import emojiChoices from '../data/emojiChoices';
 
@@ -22,6 +23,7 @@ const Concentration: React.FC = () => {
     const [cards, setCards] = useState<ICard[]>([]);
     const [indexOfFaceUpCard, setIndexOfFaceUpCard] = useState<number | null>(null);
     const [flipsCount, setFlipsCount] = useState<number>(0);
+    const [isGameOver, setIsGameOver] = useState<boolean>(false);
     const numberOfCards: number = 7;
     const numberOfPairsOfCards: number = (numberOfCards + 1) / 2;
 
@@ -48,13 +50,17 @@ const Concentration: React.FC = () => {
                         card.isFaceUp = false;
                     });
                 }, 1000);
+                const notMatchedCards = tempCards.filter((card) => !card.isMatched);
+                if (notMatchedCards.length === 0) {
+                    setIsGameOver(true);
+                }
                 setIndexOfFaceUpCard(null);
             }
         }
         setCards(tempCards);
     };
 
-    useEffect(() => {
+    const createCards = () => {
         const id = idsFactory();
         let tempCards: ICard[] = [];
         for (let i = 0; i < numberOfPairsOfCards; i++) {
@@ -68,7 +74,9 @@ const Concentration: React.FC = () => {
         }
         tempCards = shuffle(tempCards);
         setCards(tempCards);
-    }, [numberOfPairsOfCards]);
+    };
+
+    useEffect(createCards, [numberOfPairsOfCards]);
 
     return (
         <StyledConcentration py={5}>
@@ -90,6 +98,15 @@ const Concentration: React.FC = () => {
                             chooseCard(index);
                         }}/>)}
             </Grid>
+            {
+                isGameOver
+                    ? <GameOver onClick={() => {
+                        setIsGameOver(false);
+                        setFlipsCount(0);
+                        createCards();
+                    }} />
+                    : ""
+            }
         </StyledConcentration>
     );
 };
