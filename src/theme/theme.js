@@ -17,7 +17,7 @@ export const BaseStyles = createGlobalStyle`
   html {
     font-size: 1vh;
     font-family: 'Bangers', cursive;
-    letter-spacing: 2px;
+    letter-spacing: 0.2em;
   }
   
   body {
@@ -30,8 +30,9 @@ export default {
     black: '#222',
     white: '#fff'
   },
-  space: ['0', '4px', '1rem', '16px', '24px', '32px', '40px', '48px', '64px', '80px', '96px', '112px', '128px'],
-  sizes: ['544px', '80rem', '1012px', '1280px'],
-  breakpoints: ['544px', '768px', '1012px', '1280px'],
-  radii: ['0', '3px', '6px'],
+  fontSizes: ['0.5rem', '1rem', '2rem', '3rem', '4rem', '5rem', '6rem', '7rem', '8rem'],
+  space: ['0', '0.4rem', '0.8rem', '1.2rem', '1.6rem', '2rem', '2.4rem', '2.8rem', '3.2rem'],
+  sizes: ['20rem', '40rem', '60rem', '80rem'],
+  breakpoints: ['40rem'],
+  radii: ['0', '0.2rem', '0.4rem', '0.6rem'],
 }

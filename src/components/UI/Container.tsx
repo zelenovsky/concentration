@@ -8,7 +8,7 @@ const StyledContainer = styled.div<LayoutProps & SpaceProps>`
 `;
 
 const Container: FC<LayoutProps> = (props) => {
-    return <StyledContainer mx="auto" px={4} {...props} />
+    return <StyledContainer mx="auto" px={6} {...props} />
 };
 
 export default Container;

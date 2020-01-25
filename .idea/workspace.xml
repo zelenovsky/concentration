@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40389ae7-fbda-49cf-94bf-4fed93d12b81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/GameOver.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Concentration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concentration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/emojiChoices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/emojiChoices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FlipsCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FlipsCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameOver.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameOver.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Flex.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Flex.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +118,8 @@
       <workItem from="1579431490391" duration="10279000" />
       <workItem from="1579517856461" duration="6556000" />
       <workItem from="1579617236608" duration="4457000" />
-      <workItem from="1579702708992" duration="4760000" />
+      <workItem from="1579702708992" duration="5657000" />
+      <workItem from="1579953970925" duration="4914000" />
     </task>
     <task id="LOCAL-00001" summary="Fix responsive">
       <created>1579345673005</created>
@@ -156,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579622433616</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Game over button">
+      <created>1579708213284</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579708213284</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +182,8 @@
     <MESSAGE value="Add render logic" />
     <MESSAGE value="Add choose card logic" />
     <MESSAGE value="Add flips counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flips counter" />
+    <MESSAGE value="Add Game over button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Game over button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578490523927">
@@ -179,10 +194,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1578754540687" />
-    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579622433504">
+    <state x="254" y="48" key="CommitChangelistDialog2" timestamp="1579708213101">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579622433504" />
+    <state x="254" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579708213101" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1579359864098">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { space, SpaceProps } from 'styled-system';
 
 import Grid from './UI/Grid';
+import Flex from './UI/Flex';
 import Card, { ICard } from './Card';
 import FlipsCounter from './FlipsCounter';
 import GameOver from './GameOver';
 import { idsFactory, randomChoice, shuffle } from '../helpers/helpers';
 import emojiChoices from '../data/emojiChoices';
-
-const StyledConcentration = styled.div<SpaceProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  perspective: 1000px;
-  ${space};
-`;
 
 const Concentration: React.FC = () => {
     const [cards, setCards] = useState<ICard[]>([]);
@@ -79,25 +68,26 @@ const Concentration: React.FC = () => {
     useEffect(createCards, [numberOfPairsOfCards]);
 
     return (
-        <StyledConcentration py={5}>
-            <FlipsCounter count={flipsCount} />
-            <Grid
-                gridTemplateColumns={["1fr 1fr", "1fr 1fr 1fr"]}
-                gridGap={2}
-                width="100%"
-                height="100%">
-                { cards.map((card, index) =>
-                    <Card
-                        key={index}
-                        id={card.id}
-                        emoji={card.emoji}
-                        isFaceUp={card.isFaceUp}
-                        isMatched={card.isMatched}
-                        onClick={() => {
-                            setFlipsCount(flipsCount + 1);
-                            chooseCard(index);
-                        }}/>)}
-            </Grid>
+        <>
+            <Flex py={5} minHeight="100vh" alignItems="center" justifyContent="center" flexDirection="column">
+                <FlipsCounter count={flipsCount} />
+                <Grid
+                    gridTemplateColumns={["1fr 1fr", "1fr 1fr 1fr"]}
+                    gridGap={4}
+                    width="100%">
+                    { cards.map((card, index) =>
+                        <Card
+                            key={index}
+                            id={card.id}
+                            emoji={card.emoji}
+                            isFaceUp={card.isFaceUp}
+                            isMatched={card.isMatched}
+                            onClick={() => {
+                                setFlipsCount(flipsCount + 1);
+                                chooseCard(index);
+                            }}/>)}
+                </Grid>
+            </Flex>
             {
                 isGameOver
                     ? <GameOver onClick={() => {
@@ -107,7 +97,7 @@ const Concentration: React.FC = () => {
                     }} />
                     : ""
             }
-        </StyledConcentration>
+        </>
     );
 };
 

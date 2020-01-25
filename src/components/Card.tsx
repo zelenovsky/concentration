@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent } from 'react';
 import styled from 'styled-components';
-import { color, ColorProps, border, BorderProps } from 'styled-system';
+import { color, ColorProps, border, BorderProps, typography, TypographyProps } from 'styled-system';
 
 interface isMatched {
     isMatched: boolean;
@@ -32,19 +32,21 @@ const StyledCard = styled.button.attrs(() => ({
     opacity: ${({ isMatched }) => isMatched ? "0" : "1"};
     transition: opacity 1s ease-out 1s;
     will-change: opacity;
+    outline: none;
+    perspective: 1000px;
 `;
 
-const StyledFrontSide = styled.div<ColorProps & BorderProps & isFaceUp>`
+const StyledFrontSide = styled.div<ColorProps & BorderProps & TypographyProps & isFaceUp>`
     position: relative;
     z-index: 1;
     display: block;
-    padding: 8rem 2rem;
-    font-size: 6rem;
+    padding: 10rem 2rem;
     transform: ${({ isFaceUp }) => isFaceUp ? "rotateY(0)" : "rotateY(-180deg)"};
     transition: transform 1s ease-out;
     backface-visibility: hidden;
     ${color};
     ${border};
+    ${typography};
 `;
 
 const StyledBackSide = styled.div<ColorProps & BorderProps & isFaceUp>`
@@ -70,10 +72,10 @@ const Card: FC<ICard & ICardEventHandler> = ({
 }) => {
     return (
         <StyledCard onClick={onClick} isMatched={isMatched}>
-            <StyledFrontSide bg="black" borderRadius={2} isFaceUp={isFaceUp}>
+            <StyledFrontSide bg="black" borderRadius={3} fontSize={6} isFaceUp={isFaceUp}>
                 { emoji }
             </StyledFrontSide>
-            <StyledBackSide bg="black" borderRadius={2} isFaceUp={isFaceUp}/>
+            <StyledBackSide bg="black" borderRadius={3} isFaceUp={isFaceUp}/>
         </StyledCard>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
+
 import theme, { BaseStyles } from './theme/theme';
 import Concentration from './components/Concentration';
 import Container from './components/UI/Container';
@@ -9,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <ThemeProvider theme={theme}>
         <BaseStyles />
-        <Container maxWidth={1}>
+        <Container maxWidth={3}>
             <Concentration />
         </Container>
     </ThemeProvider>,

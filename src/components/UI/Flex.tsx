@@ -1,13 +1,17 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { flexbox, FlexboxProps } from 'styled-system';
+import { space, SpaceProps, layout, LayoutProps, flexbox, FlexboxProps } from 'styled-system';
 
-const StyledFlex = styled.div<FlexboxProps>`
+type StyledFlexProps = FlexboxProps & SpaceProps & LayoutProps;
+
+const StyledFlex = styled.div<StyledFlexProps>`
   ${flexbox};
+  ${space};
+  ${layout};
   display: flex;
 `;
 
-const Flex: FC<FlexboxProps> = (props) => {
+const Flex: FC<StyledFlexProps> = (props) => {
     return <StyledFlex {...props} />
 };
 
